@@ -1,0 +1,4 @@
+numpy==1.19.2
+py4j==0.10.9
+pyarrow==1.0.1
+pyspark==3.0.1
