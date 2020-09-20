@@ -12,7 +12,7 @@ Foi desenvolvido um [script em PySpark](main.py) que faz a conversão do `csv` p
 
 No script PySpark foi desenvolvido uma conversão desacoplada, onde é possível adicionar novos campos para serem realizados a conversão, o quê foi feito com o campo `id` que estava com string, e o incluí para que fosse convertido para `integer`.
 
-# Execução do script.
+# Execução do script
 
 Codigo desenvolvido em PySpark, sendo necessário a versão do Python3, as instruções abaixo foram realizadas em ambiente Linux.
 
