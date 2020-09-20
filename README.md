@@ -74,3 +74,5 @@ rm -rf venv
 O script desenvolvido pode ser colocado para rodar em serviços em Cloud, irei focar nos serviços AWS, pois é a Cloud que eu tenho mais conhecimento e quero focar por hora.
 
 A maneira mais robusta de escalar esse script é utilizar o `EMR`, um serviço gerenciado da AWS para execução de elástica de operações Map/Reduce, eu usaria o serviço gerenciado de cluster Spark, com os arquivos csv que fossem necessário entrar no Data Lake, colocando esses csv num bucket chamado de `raw`, onde ficariam os dados originais sem a conversão, e criaria um bucket chamado `data`, onde iam ficar os arquivos já convertidos e com as devidas regras, como por exemplo, uma deduplicaçao e salvos em Parquet comprimidos em Snappy.
+
+Para orquestrar as execuções do script, já pensando que mais jobs serão necessários eu utilizaria o Airflow, a infra desse ambiente eu criaria de forma desacoplada, criando um serviço para o worker, scheduler, webserver, celery e flower.
